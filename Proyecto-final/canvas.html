@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estiloscanvas.css">
+    <title>Canvas con Funciones</title>
+</head>
+<body>
+    <header>
+        <a href="homeeter.html"><div class="grid-header">
+            <h1>NOTAETER</h1>
+            <h2>&nbsp;&nbsp;REGRESAR A CASA</h2>
+        </div></a>
+    </header>
+    <section class="dinamica"> 
+        <div class="rowww">
+            <div class="text">
+                <h5>DINÁMICA ÉTER</h3>
+                <h4>CREA LA PROXIMA PORTADA PARA <a href="">NSQK</a></h4>
+                <p>NSQK se ha asociado a NOTAETER para llamar a la comunidad a crear un prototipo online para la nueva portada de su próximo single.
+                    El ganador recibirá además una gran compensación económica más créditos. 
+                </p> 
+                <p>
+                    Al finalizar tu diseño descarga tu propuesta y mandanosla al DINAMICASETER@gmail.com. La noticia de anuncio aparecerá en nuestra página web
+                    el próximo 12 de Diciembre con un video colaborativo junto a NSQK
+                </p>
+            </div> 
+        </div>
+    </section>
+    <!-- Sección de Canvas -->
+    <canvas class="canvas" id="canvas" width="800" height="600"
+            onclick="DibujarFigura(event)"
+            onmousedown="alHacerClick(event)"
+            onmousemove="move(event)"
+            onmouseleave="leave()"
+            onmouseup="alSoltarClick(event)">
+        </canvas>
+ 
+    <div class="barra-herramientas">
+
+        <div class="contenedor-imagnes-prev">
+            <div id="imagen-prev" class="imagen-prev">
+                <input type="file" name="seleccionar-imagen" id="seleccionar-imagen" onchange="cargarImagenFondo(event)">
+                <label for="seleccionar-imagen">
+                    <div></div>
+                </label>
+            </div>                
+            <div id="sticker-prev" class="imagen-prev">
+                <input type="file" name="seleccionar-sticker" id="seleccionar-sticker" onchange="cargarSticker(event)">
+                <label for="seleccionar-sticker">
+                    <div></div>
+                </label>
+            </div>
+        </div>
+         
+        <div>
+            <div>
+                <input type="range" name="" id="rango-imagen" min="10" max="100">
+            </div>
+        </div>
+
+        <div class="contenedor-botones"> 
+            <input class="btn-cambio" type="button" value="Pincel" onclick="SeleccionarOpcion('pincel')">
+            <input class="btn-cambio" type="button" value="Borrador" onclick="SeleccionarOpcion('borrador')">
+            <input class="btn-cambio" type="button" value="Línea" onclick="SeleccionarOpcion('linea')">
+            <input class="btn-cambio" type="button" value="Cuadro" onclick="SeleccionarOpcion('cuadrado')">
+            <input class="btn-cambio" type="button" value="Círculo" onclick="SeleccionarOpcion('circulo')">
+            <input class="btn-cambio" type="button" value="Triángulo" onclick="SeleccionarOpcion('triangulo')">
+            <input class="btn-cambio" type="button" value="Sticker" onclick="SeleccionarOpcion('imagen')">
+            <input class="btn-cambio" type="button" value="Deshacer" onclick="deshacerCambio()">
+            <input class="btn-cambio" type="button" value="Rehacer" onclick="rehacerCambio()">
+            <input class="btn-cambio" type="button" value="Descargar" onclick="descargarImagen()">
+
+ 
+            <input class="btn-cambio" type="button" value="Azul" id="azul" onclick="aplicarFiltro('azul')">
+            <input class="btn-cambio" type="button" value="Verde" id="verde" onclick="aplicarFiltro('verde')">
+            <input class="btn-cambio" type="button" value="Rojo" id="rojo" onclick="aplicarFiltro('rojo')">
+            <input class="btn-cambio" type="button" value="Negativo" id="negativo" onclick="aplicarFiltro('negativo')">
+            <input class="btn-cambio" type="button" value="B&W" id="black-and-white" onclick="aplicarFiltro('blanco-y-negro')">
+        </div>
+        
+        <div class="contenedor-grupo-seleccionar-color">
+            <div class="contenedor-seleccionar-color">
+                <label for="Linea">Contorno</label>
+                <input class="seleccionar-color" type="color" name="Linea" id="seleccionar-color-linea" value="#FFA113">
+            </div>
+            
+            <div class="contenedor-seleccionar-color">
+                <label for="Relleno">Relleno</label>
+                <input class="seleccionar-color" type="color" name="Relleno" id="seleccionar-color-relleno" value="#fffde7">
+            </div>
+            
+        </div>
+    </div>
+     
+    <footer class="footer">
+        <span>NOTAETER™</span>
+        <a href="index.html" class="logout-link">SALIR DE MI CUENTA</a>
+    </footer>    
+    <script src="js/recursos.js"></script>
+<script src="js/canvas.js"></script>
+<script src="js/filtros.js"></script>
+</body>
+</html>

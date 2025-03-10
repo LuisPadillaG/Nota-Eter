@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Hammersmith+One&family=League+Gothic&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: #141414;
+}
+body{
+    min-width: 100%;
+    max-width: 1400px;
+}
+a{
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 0, 0, 0);
+}
+.grid-header{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background-color: #141f4500;
+}
+.grid-header:hover h1{
+    opacity: 20%;
+    z-index: 4;
+}
+.grid-header:hover h2{
+    opacity: 100%;
+}
+.grid-header h1{
+    grid-row: 1/6;
+    grid-column: 2/7;
+    font-family: 'League Gothic';
+    font-weight:300;
+    font-size: calc(100px);
+    color: #fffde7;
+    opacity: 100%;
+    z-index: 2;
+    transition: 0.1s;
+}
+.grid-header h1 a:hover{
+    color: #fffde7;
+}
+.grid-header h2{
+    grid-row: 2/6;
+    grid-column: 2/5;
+    font-family: 'League Gothic';
+    font-weight:lighter;
+    letter-spacing: 1px;
+    font-size: 6vh;
+    z-index: 4; 
+    transition: 0.5s;
+    opacity: 0%;
+}
+
+
+
+
+.rauw{
+    color: goldenrod;
+}
+.grammy{
+    color: rgb(226, 73, 73);
+}
+.aurora{
+    color: rgb(167, 167, 255);
+}
+
+
+.dinamica {
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.rowww {
+    display: flex; 
+    flex-direction: column;
+}
+
+.dinamica h2 {
+    padding: 3vw;
+    font-family: 'Hammersmith One';
+    font-size: 32px;
+    color: #fffde7;
+    letter-spacing: 1px;
+}
+
+.text {
+    width: 100%;
+    padding-left: 8%;
+    padding-right: 8%;
+    background-color: rgba(238, 130, 238, 0);
+    display: flex;  
+    flex-direction: column;   
+    justify-content: center;
+}
+.noticiero{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.pes{
+    width: 75%;
+}
+.spotify{
+    width: 25%;
+    height: 400px;
+}
+.text h5{ 
+    font-family: 'Hammersmith One';
+    font-size: 16px;
+    display: flex;
+    text-align: left;
+}
+.text h4{
+    color: #fffde7;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 30px;
+} 
+.text p{
+    color: #fffde7;
+    font-family: 'Montserrat';
+    font-weight: 200;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-right: 50px;
+}
+.images {
+    width: 100%;
+    height: 500px;
+    background-color: rgba(250, 235, 215, 0);
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+}
+.images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+.fotorauw1{
+    grid-row: 3/10;
+    grid-column: 4/8;
+    z-index: 4;
+}
+.fotorauw2{
+    grid-row: 2/8;
+    grid-column: 7/10;
+    z-index: 3;
+}
+.fotorauw3{
+    grid-row: 1/5;
+    grid-column:2/5;
+}
+
+.foto-grammy-1{
+    grid-row: 1/8;
+    grid-column: 2/7;
+    z-index: 4;
+}
+.foto-grammy-2{
+    grid-row: 5/10;
+    grid-column: 5/9;
+    z-index: 3;
+}
+.foto-grammy-3{
+    grid-row: 2/8;
+    grid-column:6/10;
+}
+.foto-aurora-1{
+    grid-row: 3/10;
+    grid-column: 3/8;
+    z-index: 3;
+}
+.foto-aurora-2{
+    grid-row: 1/8;
+    grid-column: 7/10;
+    z-index: 4;
+}
+
+
+#drag-area, #drop-area {
+    width: 100px;
+    height: 100px;
+    border: 2px dashed #cccccc00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+#draggable {
+    width: 100%;
+    height: 100%;
+    background-color: #007bff00;
+    background-image: url(../recursos/img/heart-svgrepo-com.svg);
+    background-size: cover;
+    color: #fffde7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+
+#drop-area {
+    border: 5px dashed #fffde7;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.footer {
+    width: 100%;
+    height: 150px;
+    background-color: #33333300; /* Fondo oscuro para contraste */
+    color: #fffde7; /* Texto blanco */
+    display: flex;
+    font-family: 'League Gothic';
+    font-weight:lighter;
+    font-weight: 400;
+    justify-content: space-between; /* Alinear los elementos a las esquinas */
+    align-items: center; /* Centrar verticalmente */
+    padding: 20px; /* Padding interno para separar del borde */
+    box-sizing: border-box; /* Incluir padding dentro del tamaño */
+    font-size: 25px;
+    margin-top: 100px;
+}
+
+.footer span {
+    margin-left: 20px; /* Separar del borde izquierdo */
+}
+
+.footer .logout-link {
+    margin-right: 20px; /* Separar del borde derecho */
+    color: #fffde7; /* Color llamativo */
+    text-decoration: none; /* Quitar subrayado */
+    transition: 0.3s;
+}
+
+.footer .logout-link:hover {
+    color: #FFA113;
+}

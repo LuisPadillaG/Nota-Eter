@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>NOTA ETER</title>
+</head>
+<body>
+    <header>
+        <div class="grid-header">
+            <h1><a href="index.html">NOTAETER</a></h1>
+            <h2>INICIAR SESIÓN</h2>
+        </div>
+    </header>
+    <main>
+        <form class="form-login" action="#" method="POST">
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" placeholder="Tu usuario" required>
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" placeholder="Tu contraseña" required>
+            
+            <button type="submit">Iniciar Sesión</button>
+            <p>¿No recuerdas tu cuenta? <a href="#" id="register-link">Ver cuentas del dispositivo</a></p>
+        </form>
+        <div id="accounts-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>Cuentas Disponibles</h3>
+                <ul id="accounts-list"></ul>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="js/forms.js"></script>
+</html>
